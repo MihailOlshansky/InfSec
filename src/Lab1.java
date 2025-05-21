@@ -26,7 +26,7 @@ public class Lab1 {
         String ciphertext = readFromFile(INPUT_FILE);
 
         ciphertext = ciphertext.toUpperCase();
-        String ciphertextAlp = ciphertext.replaceAll("[^\\p{IsAlphabetic}]", "");
+        String ciphertextAlp = ciphertext.replaceAll("[^АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ]", "");
 
         int keyLength = findKeyLength(ciphertextAlp);
         System.out.println("Предполагаемая длина ключа: " + keyLength);
